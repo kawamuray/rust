@@ -38,8 +38,7 @@ impl Thread {
 
         let in_ = wasi::Subscription {
             userdata: USERDATA,
-            r#type: wasi::EVENTTYPE_CLOCK,
-            u: wasi::SubscriptionU { clock },
+            u: wasi::SubscriptionU { tag: 0, u: wasi::SubscriptionUU { clock } },
         };
         unsafe {
             let mut event: wasi::Event = mem::zeroed();
