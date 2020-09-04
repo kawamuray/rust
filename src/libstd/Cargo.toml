@@ -44,7 +44,7 @@ fortanix-sgx-abi = { version = "0.3.2", features = ['rustc-dep-of-std'] }
 hermit-abi = { version = "0.1.13", features = ['rustc-dep-of-std'] }
 
 [target.wasm32-wasi.dependencies]
-wasi = { path = "../wasi", features = ['rustc-dep-of-std'], default-features = false }
+wasi = { path = "../../../wasi", features = ['rustc-dep-of-std'], default-features = false }
 
 [features]
 default = ["std_detect_file_io", "std_detect_dlsym_getauxval", "panic-unwind"]
